@@ -1,13 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+[build]
+  publish = "dist"
+  command = "npm run build"
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/',
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src')
-    }
-  }
-})
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
