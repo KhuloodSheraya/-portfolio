@@ -6,6 +6,16 @@
   NODE_VERSION = "18"
 
 [[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript"
