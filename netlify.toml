@@ -1,14 +1,8 @@
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Type = "text/javascript"
+/*.js
+  Content-Type: text/javascript
 
-[[headers]]
-  for = "*.mjs"
-  [headers.values]
-    Content-Type = "text/javascript"
+/*.mjs
+  Content-Type: text/javascript
 
-[[headers]]
-  for = "*.ts"
-  [headers.values]
-    Content-Type = "text/javascript"
+/*.jsx
+  Content-Type: text/javascript
